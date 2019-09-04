@@ -15,11 +15,16 @@ public class PartList {
     }
 
     public ComputerPart get(int index) {
-        return null;
+        if (index >= 0 && index < count)
+            return partList[index];
+        else
+            return null;
     }
 
     public ComputerPart get(String name) {
-        return null;
+        for (int i = 0; i<count; i++) {
+
+        }
     }
 
     public void append(ComputerPart part) {
