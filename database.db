@@ -1,0 +1,24 @@
+CPU,AMD Ryzen 5,119.99,4,3.2
+CPU,AMD Ryzen 3,97.99,4,3.7
+CPU,Intel Core i5,234.96,4,3.3
+CPU,Intel Core i7,679.0,8,3.6
+CPU,Intel Core i9,2005.0,18,2.6
+CPU,Intel Xeon Platinum,13000.0,28,2.0
+CPU,AMD Ryzen Threadripper,899.99,16,3.5
+CPU,AMD EPYC,4324.0,64,2.0
+GraphicsCard,NVIDIA Quadro RTX,6300.0,1005,48
+GraphicsCard,NVIDIA TITAN V CEO Edition,2999.0,1200,32
+GraphicsCard,NVIDIA TITAN Xp,1200.0,1405,12
+GraphicsCard,AMD Radeon R9 Fury,399.99,1000,4
+GraphicsCard,AMD Radeon RX,149.99,1168,8
+Memory,G-Skill Ripjaws V,112.23,8,3200,DDR4
+Memory,Corsair Vengeance LED,239.0,16,3000,DDR4
+Memory,Corsair Dominator Platinum,1399.0,64,3000,DDR4
+Memory,G-Skill TridentZ Series,189.0,8,4266,DDR4
+Memory,Kingston ValueRAM,98.0,8,1600,DDR3
+Memory,Samsung CL11,49.52,8,1600,DDR3
+Storage,Seagate Barracuda,60.0,1000,HDD
+Storage,WD Purple,72.0,1000,HDD
+Storage,WD Red,107.0,2000,HDD
+Storage,Toshiba P300,115.0,3000,HDD
+Storage,Seagate FireCuda,105.0,1000,SSHD
