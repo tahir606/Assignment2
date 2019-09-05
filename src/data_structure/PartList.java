@@ -77,11 +77,13 @@ public class PartList {
             body = body + "\n" + partList[count].getName() + "," + partList[count].getPrice();
         }
 
-        try{
-            FileWriter fw=new FileWriter(filename);
+        try {
+            FileWriter fw = new FileWriter(filename);
             fw.write(body);
             fw.close();
-        }catch(Exception e){System.out.println(e);}
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         System.out.println("Success...");
     }
 
@@ -93,5 +95,13 @@ public class PartList {
         }
         body = body + "--------------------";
         return body;
+    }
+
+    public String[] getNamesInArray() {
+        String[] names = new String[count];
+        for (int i = 0; i < count; i++) {
+            names[i] = partList[i].getName();
+        }
+        return names;
     }
 }
