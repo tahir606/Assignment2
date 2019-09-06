@@ -1,0 +1,2 @@
+Storage,WD Red,107.0,2000,HDD
+Storage,WD Purple,72.0,1000,HDD

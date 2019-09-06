@@ -35,7 +35,7 @@ public class GraphicsCard extends ComputerPart {
 
     public static GraphicsCard parse(String csvLine) {
         String[] split = csvLine.split(",");
-        return new GraphicsCard(split[1], Double.parseDouble(split[2]), Integer.parseInt(split[3]), Integer.parseInt(split[4]));
+        return new GraphicsCard(split[1], Double.parseDouble(split[2]), Integer.parseInt(split[3]), Integer.parseInt(split[4].trim()));
     }
 
     public int getFrequencyMHz() {

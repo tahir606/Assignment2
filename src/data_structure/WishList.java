@@ -3,6 +3,7 @@ package data_structure;
 public class WishList extends PartList {
 
     public WishList() {
+        super();
     }
 
     public double calculateTotalCost() {
@@ -14,15 +15,16 @@ public class WishList extends PartList {
     }
 
     public boolean isValidComputer() {
+        System.out.println(super.toString());
         boolean cpu = false, gc = false, mem = false, stg = false;
         for (int i = 0; i < size(); i++) {
-            if (get(size()).toCSVString().startsWith("CPU"))
+            if (get(i).toCSVString().startsWith("CPU"))
                 cpu = true;
-            if (get(size()).toCSVString().startsWith("Graphics Card"))
+            if (get(i).toCSVString().startsWith("Graphics Card"))
                 gc = true;
-            if (get(size()).toCSVString().startsWith("Memory"))
+            if (get(i).toCSVString().startsWith("Memory"))
                 mem = true;
-            if (get(size()).toCSVString().startsWith("Storage"))
+            if (get(i).toCSVString().startsWith("Storage"))
                 stg = true;
 
             if (cpu && gc && mem && stg)
@@ -33,9 +35,8 @@ public class WishList extends PartList {
 
     @Override
     public String toString() {
-        return super.toString() +
-                " Total Cost: " + calculateTotalCost() +
-                " Validity: " + isValidComputer();
+        return "\nTotal Cost: " + calculateTotalCost() +
+                "\nValidity: " + isValidComputer() + "\n\n";
     }
 
 

@@ -22,7 +22,9 @@ public class Memory extends ComputerPart {
 
     @Override
     public String toString() {
-        return getName() + ", " + capacityGB + "GB, " + ddr + " @ " + frequencyMHz + "MHz for $" + getPrice();
+        String a = getName() + ", " + capacityGB + "GB, @";
+        String b = frequencyMHz + "MHz for $" + getPrice();
+        return a.concat(b);
     }
 
     public static Memory input() {

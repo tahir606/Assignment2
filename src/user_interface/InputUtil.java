@@ -4,21 +4,26 @@ import java.util.Scanner;
 
 public class InputUtil {
 
-    private static Scanner keyboard = new Scanner(System.in);
+    private static Scanner keyboard = new Scanner(System.in).useDelimiter("\n");
 
     public static String inputString(String prompt) {
         System.out.println(prompt);
-        String input = keyboard.next();
-        return input;
+        try {
+            String input = keyboard.next();
+            return input;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return null;
     }
 
     public static String inputString(String prompt, String[] validValues) {
-        String input;
+        String input = "";
         while (true) {
             System.out.println(prompt);
             input = keyboard.next();
             for (int i = 0; i < validValues.length; i++) {
-                if (input.equals(validValues[i])) {
+                if (input.equalsIgnoreCase(validValues[i])) {
                     return input;
                 }
             }

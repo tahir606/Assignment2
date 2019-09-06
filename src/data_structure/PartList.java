@@ -24,8 +24,10 @@ public class PartList {
     }
 
     public ComputerPart get(String name) {
+        System.out.println(name);
         for (int i = 0; i < count; i++) {
-            if (partList[i].getName().equals(name)) {
+            System.out.println(partList[i].getName());
+            if (partList[i].getName().contains(name)) {
                 return partList[i];
             }
         }
@@ -53,6 +55,7 @@ public class PartList {
             if (partList[i].getName().equals(name)) {
                 ComputerPart part = partList[i];
                 partList[i] = null;
+                removeNulls();
                 return part;
             }
         }
@@ -65,6 +68,9 @@ public class PartList {
             if (part != null)
                 removedNull.add(part);
         partList = removedNull.toArray(new ComputerPart[100]);
+        count = removedNull.size();
+        System.out.println(partList);
+        System.out.println(count);
     }
 
     public int size() {
@@ -72,9 +78,10 @@ public class PartList {
     }
 
     public void saveToCSVFile(String filename) {
+
         String body = "";
         for (int i = 0; i < count; i++) {
-            body = body + "\n" + partList[count].getName() + "," + partList[count].getPrice();
+            body = body + partList[i].toCSVString() + "\n";
         }
 
         try {
@@ -91,16 +98,16 @@ public class PartList {
     public String toString() {
         String body = "---- Part List ----";
         for (int i = 0; i < count; i++) {
-            body = body + "\n" + partList[count].getName();
+            body = body + "\n" + partList[i].getName();
         }
-        body = body + "--------------------";
+        body = body + "\n--------------------";
         return body;
     }
 
     public String[] getNamesInArray() {
         String[] names = new String[count];
         for (int i = 0; i < count; i++) {
-            names[i] = partList[i].getName();
+            names[i] = partList[i].getName().trim();
         }
         return names;
     }
